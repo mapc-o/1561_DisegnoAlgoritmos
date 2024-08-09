@@ -1,23 +1,34 @@
-Desde el método main se realiza la creación de los nodos que formarán parte de la estructura, 
-se utiliza el constructor de los objetos tipo Nodo que recibe como parámetros el valor del nodo 
-y el número máximo de enlaces a otros nodos que éste puede tener.
-La sintaxis para la creación de nodos es:
-  Nodo nombre_nodo = new Nodo("valor_nodo", numero_max_enlaces);
+Archivo Nodo.java contiene la clase Nodo así como su constructor, además de los métodos de get y set
+para los atributos del nodo: valor, enlace superior, enlace de enmedio, enlace inferior.
 
-Donde:
-  Nodo hace referencia al tipo de dato
-  nombre_nodo es un identificador para el nodo
-  new Nodo() indica que se construye un nuevo objeto de tipo Nodo
-  "valor_nodo" recibe un valor de tipo String que tomará el nuevo Nodo
-  numero_max_anlaces recibe un valor de tipo int y representa la mayor cantidad de nodos enlazados 
-    que puede tener el nodo que se está creando
+Archivo estructura.java contiene el ejecutable de la clase Nodo, aquí se imprime el nodo 99 y el nodo 57.
 
-A partir de los nodos construidos ahora se formarán los enlaces entre ellos, con ayuda de la 
-función enlazar, cuya sintaxis es:
+    Nodo.java
+La clase Nodo contiene atributo de valor (int) y 3 enlaces (objetos de clase Nodo)
 
-  nombre_nodo_origen.enlazar(nombre_nodo_destino);
+El constructor de los objetos Nodo recibe como parámetro el valor que tendrá el nodo, 
+y los enlaces tipo Nodo se inicializan con valor nulo
 
-Donde:
-  nombre_nodo_origen hace referencia al nodo desde el cual se origina la conexión
-  nombre_nodo_destino se refiere al nodo que se desea conectar el nodo origen, es el último nodo
-  que abarca la conexión a crear
+Se declaran los métodos de get y set para cada uno de los atributos del objeto Nodo:
+valor, enlace superior, enlace de enmediom, enlace inferior
+
+
+    estructura.java
+Se crean los objetos Nodo necesarios para armar la estructura haciendo uso del contructor
+
+Para unir los nodos y armar la estructura, se establecen los enlaces superior, enmedio e 
+inferior de el nodo deseado con los métodos getEnlaceTop(), getEnlaceMid() y getEnlaceBottom() 
+respectivamente. Mismos que reciben un nodo objetivo como parámetro
+
+Se llama una función para imprimir el nodo con valor 99 accediendo desde el nodo head, para ello
+se llama a la función que accede al nodo de enmedio del nodo head, getEnlaceMid().
+Una vez que accedió al nodo 19, se llama a la función que accede a su nodo inferior, getEnlaceBottom().
+Una vez que accedió al nodo 67, se llama a la función que accede a su nodo de en medio, getEnlaceMid().
+Una vez que accedió al nodo que buscamos, 99, se llama a la función que retorna el valor de ese nodo, getValue().
+Se imprimirá el número 99, que es el valor del nodo objetivo
+
+Se llama una función para imprimir el nodo con valor 57 accediendo desde el nodo head, para ello
+se llama a la función que accede al nodo superior del nodo head, getEnlaceTop().
+Una vez que accedió al nodo 23, se llama a la función que accede a su nodo de enmedio, getEnlaceMid().
+Una vez que accedió al nodo que buscamos, 57, se llama a la función que retorna el valor de ese nodo, getValue().
+Se imprimirá el número 57, que es el valor del nodo objetivo
