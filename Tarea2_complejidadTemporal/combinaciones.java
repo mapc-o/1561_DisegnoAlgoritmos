@@ -11,12 +11,12 @@ public class combinaciones {
         
         for(int i = 0; i < nums.length; i++){
             System.out.println("Introduce un número: ");
-            nums[i] = scan.nextInt();   //Bucle dependiente de variable           T(n) = n
+            nums[i] = scan.nextInt();   //Bucle dependiente de variable           T(n) = 2n
         }
 
 
         for(int i = 0; i < nums.length; i++){                   
-            for(int j = 0; j < nums.length; j++){   // Bucle anidado              T(n) = n^2
+            for(int j = 0; j < nums.length; j++){   // Bucle anidado              T(n) = 2n^2
                 System.out.println("( "+nums[i]+ " , "+nums[j]+" )");
                 count++;
             }
@@ -24,7 +24,7 @@ public class combinaciones {
 
         System.out.println("Salida: " + count);                     //Impresión   T(n) = 1
 
-                                            //COSTE TOTAL                         T(n) = n^2 + n + 4
+                                            //COSTE TOTAL                         T(n) = 2n^2 + 2n + 4 T(n) = 31
 
 
     }
