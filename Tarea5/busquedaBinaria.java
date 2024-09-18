@@ -1,14 +1,14 @@
 public class busquedaBinaria {
     public static int busqueda_binaria(int[] data,int a_buscar, int inicio, int fin){
-        int mid = (inicio+fin)/ 2;
+        int mid = (inicio+fin)/ 2;  //T(n)= log2n
         //System.out.println(mid);
 
         if(data[mid] == a_buscar){
-            return mid;
+            return mid; //T(n)= 1
         }
 
         if(inicio > fin) {
-            return -1;
+            return -1; //T(n)= 1
         }
 
         if (a_buscar < data[mid]){
@@ -18,8 +18,13 @@ public class busquedaBinaria {
          else {
             return busqueda_binaria(data,a_buscar, mid+1,fin);
         }
-        
     }
+
+	
+//T(n)= 1+1+log2n
+//T(n)= log2n+2
+//T(n)= log2n
+	    
 
 
 
