@@ -1,19 +1,24 @@
 public class busquedaLineal {
 	public static int busqueda_lineal(int[] data, int a_buscar) {
-		int n = data.length;
-		int i = 0;
+		int n = data.length; //T(n)=1
+		int i = 0; //T(n)=1
 		while (i < n && data[i] != a_buscar) {
-			i = i +1;
+			i = i +1; //T(n)=n
 		}
 
 		if (i >= n) {
 			return -1;
 
 		} else {
-			return i;
+			return i; //T(n)=1
 		}
 
 	}
+
+	//T(n)= 1+1+n+1
+	//T(n)= n+ 3
+	
+	//O(n)
 
 
 	public static void main(String[]args){
